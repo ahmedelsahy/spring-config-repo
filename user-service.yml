@@ -1,6 +1,9 @@
 spring:
   application:
     name: user-service
+    
+server:
+  port: 8484
 
 custom:
-  message: Welcome to the User Service!
+  message: Welcome to the Order Service!
