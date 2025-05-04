@@ -1,11 +1,9 @@
+spring:
+  application:
+    name: order-service
+    
 server:
   port: 8585
 
 custom:
   message: Welcome to the Order Service!
-
-
-spring:
-  application:
-    name: order-service
-
