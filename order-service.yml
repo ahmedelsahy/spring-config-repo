@@ -6,21 +6,6 @@ custom:
 
 
 spring:
-  datasource:
-    url: jdbc:oracle:thin:@localhost:1521:XE
-    username: hr
-    password: hr
-    driver-class-name: oracle.jdbc.OracleDriver
+  application:
+    name: order-service
 
-  jpa:
-    database-platform: org.hibernate.dialect.Oracle12cDialect
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-    fetch-registry: true
-    register-with-eureka: true
