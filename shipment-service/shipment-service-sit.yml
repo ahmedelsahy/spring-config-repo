@@ -1,6 +1,6 @@
 server:
   port: 8484
-
+    
   datasource:
     hikari:
       pool-name: PostgresPool
