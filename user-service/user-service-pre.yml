@@ -1,17 +1,18 @@
 server:
   port: 8484
-    
+
+spring:
   datasource:
+    url: jdbc:postgresql://localhost:5432/pgdb_microservices_dev
+    username: ms_user_dev
+    password: ms_user_dev
+    driver-class-name: org.postgresql.Driver
     hikari:
       pool-name: PostgresPool
       idle-timeout: 30000
       maximum-pool-size: 10
       minimum-idle: 5
       auto-commit: true
-    password: ms_user_dev
-    driver-class-name: org.postgresql.Driver
-    username: ms_user_dev
-    url: jdbc:postgresql://localhost:5432/pgdb_microservices_dev
 
   jpa:
     hibernate:
@@ -19,5 +20,4 @@ server:
     show-sql: true
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
-      hibernate:
-        format_sql: true
+      hibernate.format_sql: true
