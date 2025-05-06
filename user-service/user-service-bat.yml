@@ -1,0 +1,32 @@
+server:
+  port: 8484
+    
+  datasource:
+    hikari:
+      pool-name: PostgresPool
+      idle-timeout: 30000
+      maximum-pool-size: 10
+      minimum-idle: 5
+      auto-commit: true
+    password: ms_user_dev
+    driver-class-name: org.postgresql.Driver
+    username: ms_user_dev
+    url: jdbc:postgresql://localhost:5432/pgdb_microservices_dev
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefered-ip-address: true
