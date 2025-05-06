@@ -1,6 +1,4 @@
-server:
-  port: 8484
-    
+spring:
   datasource:
     hikari:
       pool-name: PostgresPool
